@@ -1,0 +1,452 @@
+:root{
+    --main-color:#1C1C1C;
+    --secondary-color:#5B5B5B;
+    --background:#F7F7F7;
+}
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 0;
+}
+.navbar-dark .navbar-toggler {
+    color: #fff !important;
+    border-color: transparent !important;
+}
+h1,h2,h3,h4,h5,h6,a.navbar-brand{
+    font-family: "Montserrat", sans-serif;
+}
+.navbar{
+    padding: 20px 0 30px;
+}
+.nav-item a{
+    font-size: 14px;
+}
+a.navbar-brand{
+    font-size: 18px;
+}
+body{
+    font-family: "Poppins", sans-serif;
+}
+
+.nav-item a.nav-link {
+    position: relative; 
+    padding-bottom: 5px;
+}
+
+.nav-item a.nav-link::before {
+    position: absolute;
+    content: "";
+    width: 0%; 
+    height: 2px;
+    bottom: 0;
+    background-color: white;
+    transition: width 0.5s ease-in-out;
+}
+
+.nav-item a.nav-link.active::before {
+    width: 13%; 
+}
+/* header */
+#home{
+    background-image: url(../imgs/bg.jpg);
+    background-position: center;
+    background-size: cover;
+    
+}
+.icon-header,.caption,nav{
+    position: relative;
+    z-index: 3;
+}
+.layer-header{
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.caption h2{
+    font-size: 50px;
+    font-weight: 800;
+}
+.caption p{
+    font-size:60px ;
+    font-weight: 200;
+}
+.ico-h-circle {
+    width: 30px; 
+    height: 30px; 
+    border-radius: 50%; 
+    background-color: var(--main-color);
+    color: white; 
+    font-size: 16px;  
+}
+/* end header */
+
+/* about */
+.img-about{
+    position: relative;
+    padding-left: 30px;
+}
+.img-about::after {
+    content: "";
+    width: 80%;
+    height: 80%;
+    position: absolute;
+    left: 0px;
+    bottom: -30px;
+    background-image: url(../imgs/dots.png);
+    background-repeat: repeat;
+    z-index: -1;
+}
+.details-about h3{
+    font-size: 30px;
+    font-weight: 800;
+}
+.progress{
+    height: 1.5rem;
+    position: relative;
+}
+
+.one-pro{
+    position: relative;
+}
+.one-pro::after{
+    position:absolute;
+    content: "95%";
+    right: 5%;
+
+}
+.two-pro{
+    position: relative;
+}
+.two-pro::after{
+    position:absolute;
+    content: "80%";
+    right: 5%;
+    
+}
+.three-pro{
+    position: relative;
+}
+.three-pro::after{
+    position:absolute;
+    content: "90%";
+    right: 5%;
+}
+.progress h6{
+    font-size: 13px;
+}
+.progress-bar{
+    background-color: var(--main-color);
+}
+.button1{
+    background-color: var(--main-color);
+    transition: all 0.5s ease-in-out;
+
+}
+.button2{
+    transition: all 0.5s ease-in-out;
+}
+.button-about a.button1:hover{
+    background-color: transparent;
+    color: black !important;
+}
+.button-about a.button2:hover{
+    background-color: var(--main-color);
+    color: #fff !important;
+}
+/* end about */
+/* service */
+#service{
+    background-color: #F7F7F7;
+}
+
+.text-head h3{
+    font-size: 40px;
+    font-weight: 900;
+    position: relative;
+    z-index: 4;
+}
+.text-head h3::after{
+    content: "";
+    width: 15%;
+    height: 30px;
+    background-image: url(../imgs/dots.png);
+    background-repeat: repeat;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: -1;
+}
+.circle-services-icon{
+    width: 80px; 
+    height: 80px; 
+    border-radius: 50%; 
+    font-size: 30px;  
+    background-color: #f4f4f4;
+}
+.item-service{
+    padding: 60px 20px;
+    background: #fff;
+    box-shadow: 0px 10px 30px -8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    
+}
+.item-service span
+{
+    transition: all 0.5s ease-in-out;
+}
+.item-service:hover span{
+    background-color: var(--main-color);
+    color: #fff;
+}
+.item-service h6{
+    font-size: 18px;
+    font-weight: 800;
+}
+/*end  service */
+
+/* protofolio */
+.nav-pills .nav-link.active{
+    position: relative;
+    color: #000;
+    background-color: transparent;
+}
+.nav-pills .nav-link {
+    position: relative;
+}
+
+.nav-pills .nav-link.active::after {
+    content: "";
+    position: absolute;
+    bottom: 0px; 
+    left: 25%;
+    width: 50%;
+    height: 2px;
+    background-color: #000; 
+    transition: width 0.3s ease-in-out;
+}
+.nav-link{
+    color: #000;
+}
+.nav-link:hover {
+    color: #000;
+}
+.layer-proto{
+    position: absolute;
+    inset: 5px;
+    background: rgba(255, 255, 255, 0.95);
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+    z-index: 2;
+    transform: translateY(10px);
+}
+.work-img:hover .layer-proto{
+    opacity: 1;
+    transform: translateY(0);
+}
+.icons span{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid var(--main-color);
+    background-color: var(--main-color);
+}
+.icons span:hover{
+    background-color: transparent;
+    
+    cursor: pointer;
+}
+.icons span:hover i{
+    color: #000 !important;
+}
+/* end protofolio */
+
+/* client */
+#client{
+    background-color: var(--background);
+}
+.carousel-item img{
+    width: 25%;
+}
+.carousel-item p{
+    font-size: 15px;
+    font-weight: 400;
+}
+.carousel-item h6{
+    font-size: 16px;
+    font-weight: 600;
+}
+.carousel-item span{
+    font-size: 12px;
+    font-weight: 600;
+}
+.carousel-indicators [data-bs-target]{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #d6d6d6;
+    margin-right: 6px;
+}
+.carousel-indicators .active{
+    background-color: #869791;
+}
+/* end client */
+
+/* next client */
+.item span i{ font-size: 30px;}
+.item h3{
+    font-size: 30px;
+    font-weight: 900;
+}
+.item p{
+    font-size: 15px;
+    font-weight: 600;
+}
+/* end next client */
+
+
+/* team */
+#team{
+    background-color: var(--background);
+}
+.card-body{
+    background-color: var(--secondary-color);
+}
+.card-body h5{
+    font-size: 25px;
+    font-weight: 500;
+}
+.card-body p{
+    font-size: 20px;
+    font-weight: 700;
+}
+.layer-card{
+    position: absolute;
+    background: rgba(255, 255, 255, 0.95);
+    inset: 5px;
+    transition: 0.5s all ;
+    transform: rotateY(180deg) scale(0.5, 0.5);
+    opacity: 0;
+}
+.icon-team span{
+    font-size: 20px;
+    width:40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid var(--main-color);
+    background-color: var(--main-color);
+    cursor: pointer;
+}
+.icon-team span:hover {
+    background-color: transparent;
+    color: #000 !important;
+}
+.inner img{
+    transition: 0.5s all;
+}
+.inner:hover .layer-card,.card:hover .layer-card {
+    cursor: pointer;
+    opacity: 1;
+    transform: rotateY(0deg) scale(1, 1);
+}
+.inner:hover img{
+    transform: scale(1.2);
+} 
+/* end team */
+/* contact */
+.item-contact span{
+    font-size: 25px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #f4f4f4;
+    transition: 0.5s all;
+}
+.item-contact h6{
+    font-size: 16px;
+    font-weight: 700;
+}
+.item-contact p{
+    font-size: 15px;
+    font-weight: 400;
+}
+.item-contact:hover  span{
+    background-color: var(--main-color);
+    color: #fff !important;
+}
+
+.form-control{
+    background: #f4f4f4;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
+.form-control:focus{
+    box-shadow: none;
+    background-color:#f4f4f4 ;
+}
+textarea.form-control{
+    height: 160px;
+}
+.button-form{
+    padding: 8px 35px;
+    background-color: var(--main-color);
+    transition: all 0.3s;
+    font-size: 13px;
+    font-weight: 400;
+}
+.button-form:hover{
+    background-color: transparent;
+    color: black !important;
+}
+/* end contact */
+
+/* footer */
+#copyright{
+    background-color: var(--main-color);
+}
+#copyright p{
+    font-size: 13px;
+    font-weight: 400;
+    margin: auto;
+}
+/* end footer */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 500px) { 
+    .nav-item a.nav-link.active::before {
+        width: 13%; 
+    }
+    .carousel-item img{
+        width: 25%;
+    }
+}
+@media (min-width: 768px) { 
+    .nav-item a.nav-link.active::before {
+        width: 5%; 
+    }
+}
+@media (min-width: 1000px) { 
+    .nav-item a.nav-link.active::before {
+        width: 40%; 
+    }
+    .navbar-expand-lg .navbar-nav .nav-link {
+        padding-right: 3.5rem;
+        padding-left: .5rem;
+    }
+    .carousel-item img{
+        width: 10%;
+    }
+}
