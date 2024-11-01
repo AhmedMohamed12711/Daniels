@@ -51,6 +51,9 @@ body{
     background-size: cover;
     
 }
+.icon-header{
+    cursor: pointer;
+}
 .icon-header,.caption,nav{
     position: relative;
     z-index: 3;
@@ -282,6 +285,9 @@ body{
     border-radius: 50%;
     background-color: #d6d6d6;
     margin-right: 6px;
+}
+.carousel-indicators [data-bs-target]:hover{
+    background-color: #869791;
 }
 .carousel-indicators .active{
     background-color: #869791;
